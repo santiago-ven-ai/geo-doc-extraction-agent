@@ -1,7 +1,7 @@
 # geo-doc-extraction-agent
 
-[![CI](https://github.com/Codemonster808/geo-doc-extraction-agent/actions/workflows/ci.yml/badge.svg)](https://github.com/Codemonster808/geo-doc-extraction-agent/actions/workflows/ci.yml)
-[![Coverage](https://img.shields.io/badge/coverage-53%25-yellow)](https://github.com/Codemonster808/geo-doc-extraction-agent/actions/workflows/ci.yml)
+[![CI](https://github.com/santiago-ven-ai/geo-doc-extraction-agent/actions/workflows/ci.yml/badge.svg)](https://github.com/santiago-ven-ai/geo-doc-extraction-agent/actions/workflows/ci.yml)
+[![Coverage](https://img.shields.io/badge/coverage-53%25-yellow)](https://github.com/santiago-ven-ai/geo-doc-extraction-agent/actions/workflows/ci.yml)
 [![License: MIT](https://img.shields.io/badge/License-MIT-blue.svg)](LICENSE)
 
 A confidence-gated extraction agent that turns unstructured geological survey reports into a queryable, schema-validated dataset.
@@ -129,7 +129,7 @@ The intake gateway validates, rate-limits, and dedupes by content hash before a 
 ## Installation
 
 ```bash
-git clone https://github.com/Codemonster808/geo-doc-extraction-agent.git
+git clone https://github.com/santiago-ven-ai/geo-doc-extraction-agent.git
 cd geo-doc-extraction-agent
 python3 -m venv .venv && source .venv/bin/activate
 pip install -r requirements-dev.txt   # app deps + lint/type/security tooling
@@ -164,8 +164,8 @@ See [`docs/RUNBOOK.md`](docs/RUNBOOK.md) to run the flow, or [`docs/BUILD_GUIDE.
 
 ## Contributing
 
-Solo-maintained portfolio/demo repo — not actively seeking external contributions, but issues and questions are welcome via [GitHub Issues](https://github.com/Codemonster808/geo-doc-extraction-agent/issues). See [`CODEOWNERS`](.github/CODEOWNERS) and [`SECURITY.md`](SECURITY.md) for how reports are handled.
+Solo-maintained portfolio/demo repo — not actively seeking external contributions, but issues and questions are welcome via [GitHub Issues](https://github.com/santiago-ven-ai/geo-doc-extraction-agent/issues). See [`CODEOWNERS`](.github/CODEOWNERS) and [`SECURITY.md`](SECURITY.md) for how reports are handled.
 
 ## License
 
-[MIT](LICENSE) © Codemonster808
+[MIT](LICENSE) © santiago-ven-ai
