@@ -225,7 +225,7 @@ oauthlib==3.3.1
     # via requests-oauthlib
 onnxruntime==1.29.0
     # via chromadb
-openai==3.6.0
+openai==3.8.0
     # via -r requirements.in
 opentelemetry-api==1.44.0
     # via
