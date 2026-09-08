@@ -304,7 +304,7 @@ pygments==2.21.0
     # via
     #   pytest
     #   rich
-pypdf==6.16.2
+pypdf==6.17.0
     # via -r requirements.in
 pypika==0.51.1
     # via chromadb
