@@ -126,16 +126,7 @@ The intake gateway validates, rate-limits, and dedupes by content hash before a 
 2. **Confidence-gated retry, not blind retry** — the confidence threshold is calibrated against the labeled set, not picked arbitrarily.
 3. **Domain schema validation** — units (ft vs. m), coordinate reference systems, plausible value ranges. A record that passes the schema but places a mine in the ocean is a bug, not a pass.
 
-## Installation
-
-```bash
-git clone https://github.com/santiago-ven-ai/geo-doc-extraction-agent.git
-cd geo-doc-extraction-agent
-python3 -m venv .venv && source .venv/bin/activate
-pip install -r requirements-dev.txt   # app deps + lint/type/security tooling
-```
-
-## Usage — Demo (3 minutes)
+## Demo (3 minutes)
 
 ```bash
 source env.sh
@@ -144,16 +135,6 @@ pytest tests/unit/test_extraction.py
 make query
 ```
 
-## Testing
-
-```bash
-make test                     # unit + BDD (pytest-bdd), against real MiniStack + Go gateway
-make e2e                      # full pipeline, emits benchmarks/quality-report.json
-.venv/bin/pre-commit run --all-files   # ruff, mypy, gofmt, whitespace/EOF checks
-```
-
-CI (`.github/workflows/ci.yml`) runs the same suite on every push, plus an isolated `security` job (`pip-audit` with two chromadb CVEs explicitly suppressed — see the job's own comment — and `gosec` on the Go gateway) and a coverage gate that fails the build under the threshold on the badge above.
-
 ## What this is NOT
 
 Not a "PDF-to-text" tutorial. The domain schema, the confidence gate, and the labeled evaluation set are what make this engineering.
@@ -161,11 +142,3 @@ Not a "PDF-to-text" tutorial. The domain schema, the confidence gate, and the la
 ## Build it yourself
 
 See [`docs/RUNBOOK.md`](docs/RUNBOOK.md) to run the flow, or [`docs/BUILD_GUIDE.md`](docs/BUILD_GUIDE.md) to build from scratch.
-
-## Contributing
-
-Solo-maintained portfolio/demo repo — not actively seeking external contributions, but issues and questions are welcome via [GitHub Issues](https://github.com/santiago-ven-ai/geo-doc-extraction-agent/issues). See [`CODEOWNERS`](.github/CODEOWNERS) and [`SECURITY.md`](SECURITY.md) for how reports are handled.
-
-## License
-
-[MIT](LICENSE) © santiago-ven-ai
